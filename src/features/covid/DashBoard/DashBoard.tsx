@@ -33,7 +33,7 @@ const DashBoard:React.FC = () => {
             <AppBar position='absolute'>
                 <Toolbar>
                     <Typography variant='h6' className={classes.title}>
-                        Covid 19 Live Dashboard
+                        新型コロナウイルス感染状況
                     </Typography>
                     {
                         data &&

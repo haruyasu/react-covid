@@ -12,7 +12,7 @@ const PieChart:React.FC = () => {
     const pieChart = data && (
         <Doughnut
             data={{
-                labels: ['Infected', 'Recovered', 'Deaths'],
+                labels: ['感染者数', '回復者数', '死者数'],
                 datasets: [
                     {
                         data: [
@@ -45,7 +45,7 @@ const PieChart:React.FC = () => {
         <div>
             {data.confirmed && (
                 <Typography align='center' color='textSecondary' gutterBottom>
-                    Mortality {data.confirmed && mortality.toFixed(2)} [%]
+                    致死率 {data.confirmed && mortality.toFixed(2)}%
                 </Typography>
             )}
             {pieChart}

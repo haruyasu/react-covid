@@ -13,7 +13,7 @@ const Chart:React.FC = () => {
     const barChart = data && (
         <Bar
             data = {{
-                labels: ['Infected', 'Recovered', 'Deaths'],
+                labels: ['感染者数', '回復者数', '死者数'],
                 datasets: [
                     {
                         backgroundColor: [
@@ -31,7 +31,7 @@ const Chart:React.FC = () => {
             }}
             options={{
                 legend: {display: false},
-                title: {display: true, text: `Latest status in ${country}`}
+                title: {display: true, text: `最新状況 in ${country}`}
             }}
         />
     )
@@ -43,13 +43,13 @@ const Chart:React.FC = () => {
                 datasets: [
                     {
                         data: dailyData.map((data) => data.confirmed.total),
-                        label: 'Infected',
+                        label: '感染者数',
                         borderColor: '#3333ff',
                         fill: true
                     },
                     {
                         data: dailyData.map((data) => data.deaths.total),
-                        label: 'Deaths',
+                        label: '死者数',
                         borderColor: '#ff3370',
                         fill: true
                     }
